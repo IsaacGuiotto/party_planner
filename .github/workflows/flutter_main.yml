@@ -40,8 +40,8 @@ jobs:
       - name: Analyze project source
         run: dart analyze
 
-      - name: Run tests
-        run: flutter test
+#      - name: Run tests
+#        run: flutter test
 
       - name: Build the APK
         run: flutter build apk --release

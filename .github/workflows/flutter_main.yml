@@ -111,11 +111,10 @@ jobs:
       - name: Upload APK
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
-          firebaseToolsVersion: 12.9.1
           appId: ${{secrets.FIREBASE_ANDROID_APP_ID}}
           serviceCredentialsFileContent: ${{secrets.CREDENTIAL_FILE_CONTENT}}
-          group: testers
-          file: app-release.apk
+          groups: testers
+          file: build/app/outputs/flutter-apk/app-release.apk
 
   deploy_ios:
     runs-on: ubuntu-latest
@@ -139,8 +138,7 @@ jobs:
       - name: Upload AAB
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
-          firebaseToolsVersion: 12.9.1
           appId: ${{secrets.FIREBASE_IOS_APP_ID}}
           serviceCredentialsFileContent: ${{secrets.CREDENTIAL_FILE_CONTENT}}
-          group: testers
-          file: app-release.aab
+          groups: testers
+          file: build/app/outputs/bundle/release/app-release.aab

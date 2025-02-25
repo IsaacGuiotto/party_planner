@@ -51,7 +51,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Build IPA
-        run: flutter build ipa --release --export-options-plist=ios/Runner/ExportOptions.plist
+        run: flutter build ipa --release --no-codesign --export-options-plist=ios/Runner/ExportOptions.plist
 
       - name: Upload APK
         uses: actions/upload-artifact@master

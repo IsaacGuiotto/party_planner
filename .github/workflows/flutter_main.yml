@@ -51,7 +51,7 @@ jobs:
         run: flutter build apk --release
 
       - name: Build IPA
-        run: flutter build ios --release --no-codesign
+        run: flutter build ipa --release --export-options-plist=ios/Runner/ExportOptions.plist
 
       - name: Upload APK
         uses: actions/upload-artifact@master
@@ -63,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: ios-build
-          path: build/ios/iphoneos
+          path: build/ios/ipa/*.ipa
 
       - name: Extract version from pubspec.yaml
         id: extract_version
@@ -111,7 +111,7 @@ jobs:
           appId: ${{secrets.FIREBASE_ANDROID_APP_ID}}
           serviceCredentialsFileContent: ${{secrets.CREDENTIAL_FILE_CONTENT}}
           groups: testers
-          file: app-release.aap
+          file: app-release.apk
 
   deploy_ios:
     runs-on: ubuntu-latest

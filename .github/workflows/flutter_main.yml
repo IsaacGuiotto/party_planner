@@ -63,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: ios-build
-          path: build/ios/ipa/party_planner.ipa
+          path: build/ios/ipa/*.ipa
 
       - name: Extract version from pubspec.yaml
         id: extract_version

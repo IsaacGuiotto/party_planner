@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "326457221509",
+    "project_id": "party-planner-ig",
+    "storage_bucket": "party-planner-ig.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:326457221509:android:5ddeec470147b8d273e4ec",
+        "android_client_info": {
+          "package_name": "com.party_planner_ig.party_planner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj9VA-cTePzmn0T_b9vlZIe56iwaxGEGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

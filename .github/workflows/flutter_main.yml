@@ -96,10 +96,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: set up JDK 1.8
-        uses: actions/setup-java@v1
+      - name: Set Up Java
+        uses: actions/setup-java@v4
         with:
-          java-version: 1.8
+          distribution: 'oracle'
+          java-version: '17'
 
       - name: Download Artifact
         uses: actions/download-artifact@master
@@ -123,10 +124,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: set up JDK 1.8
-        uses: actions/setup-java@v1
+      - name: Set Up Java
+        uses: actions/setup-java@v4
         with:
-          java-version: 1.8
+          distribution: 'oracle'
+          java-version: '17'
 
       - name: Download Artifact
         uses: actions/download-artifact@master
